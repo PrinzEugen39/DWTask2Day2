@@ -1,0 +1,43 @@
+body {
+    background-image: url('https://pbs.twimg.com/media/F1SeoEVakAEUt9k?format=jpg&name=4096x4096');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+  }
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+  
+section{
+    display: flex;
+    width: 80%;
+    background-color: white; 
+    margin: 90px auto; 
+    width: 1300px; 
+    padding: 90px; 
+    border: 1px solid black; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px #666666;
+    font-family: Segoe UI;
+    
+}
+.left {
+    flex: 70%;
+    margin-right: 80px;
+    margin-top: 40px;
+}
+
+.right {
+    flex: 30%;
+    background-color: white; 
+    border: 2px solid black; 
+    margin: auto; 
+    border-radius: 15px; 
+    justify-content: center; 
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+}
