@@ -70,7 +70,7 @@ function submitData(){
     a.click();
     // https://mail.google.com/mail/?view=cm&fs=1&to=
 
-    let data = {name, email, phone, subject, message};
-    console.log(data);
+    // let data = {name, email, phone, subject, message};
+    // console.log(data);
     
 }
