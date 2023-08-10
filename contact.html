@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/contact.css">
 <body>
 
     <!-- NAV -->
     <nav>
         <div class="nav-left">
             <ul>
-                <li><img src="image/logo.png" width="100%" alt=""></li>
+                <li><a href="index.html" class="logo"><img src="image/logo.png" width="100%" alt="" /></a></li>
                 <li><a href="index.html" class="Home">HOME</a></li>
-                <li><a href="" class="MyProject">MY PROJECT</a></li>
+                <li><a href="blog.html" class="MyProject">MY PROJECT</a></li>
             </ul>
         </div>
         <div class="nav-right">
@@ -50,9 +50,10 @@
             <textarea name="" id="inputmessage" cols="30" rows="4" maxlength="50"></textarea>
         </div>
         <div style="text-align: end;">
-            <button>Submit</button>
+            <button type="button" onclick="submitData()">Submit</button>
         </div>
     </form>
+    <script src="js/contact.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Project</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/blog.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li>
+            <a href="index.html" class="logo"
+              ><img src="image/logo.png" width="100%" alt=""
+            /></a>
+          </li>
+          <li><a href="index.html" class="Home">HOME</a></li>
+          <li><a href="blog.html" class="MyProject">MY PROJECT</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <a href="contact.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <!-- Blog -->
+    <div class="blog">
+      <div class="blog-form">
+        <div class="form-container">
+          <form onsubmit="">
+            <h1>Add My Project</h1>
+            <div>
+              <label for="input-project-title">Project Name</label>
+              <input type="text" id="input-project-title" />
+            </div>
+            <div class="startend">
+              <div class="start">
+                <label for="input-blog-start">Start Date</label>
+                <input type="date" id="input-blog-start" />
+              </div>
+              <div class="end">
+                <label for="input-blog-end">End date</label>
+                <input type="date" id="input-blog-end" />
+              </div>
+            </div>
+            <div>
+              <label for="input-project-desc">Description</label>
+              <textarea id="input-project-desc"></textarea>
+            </div>
+
+            <h2>Technologies</h2>
+            <div>
+              <table style="width: 100%; margin-left: -25px">
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      id="cek1"
+                      class="multi-input"
+                      value="Node Js"
+                    />
+                  </td>
+                  <td>
+                    <label for="cek1"> Node Js</label>
+                  </td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      id="cek2"
+                      class="multi-input"
+                      value="React Js"
+                    />
+                  </td>
+                  <td>
+                    <label for="cek2"> React Js</label>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <input
+                      type="checkbox"
+                      id="cek3"
+                      class="multi-input"
+                      value="Next Js"
+                    />
+                  </td>
+                  <td>
+                    <label for="cek3"> Next Js</label>
+                  </td>
+                  <td>
+                    <input
+                      type="checkbox"
+                      id="cek4"
+                      class="multi-input"
+                      value="TypeScript"
+                    />
+                  </td>
+                  <td>
+                    <label for="cek4"> TypeScript</label>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <!-- upload image -->
+            <div>
+              <label>Upload Image</label>
+              <div class="input-image">
+                <label for="input-image">
+                  <p>Attach File</p>
+                  <img src="image/file.png" alt="file" />
+                </label>
+                <input type="file" id="input-image" hidden />
+              </div>
+            </div>
+            <div class="button-group">
+              <button type="button" onclick="addBlog(event)">Post Blog</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Content -->
+
+    <div id="contents" class="blog-list">
+      <div class="blog-list-item">
+        <div class="blog-image">
+          <img src="image/EVfBp4yU8AEVisy.jpg" alt="" />
+        </div>
+        <div class="title-content">
+          <a href="blog-content.html"
+            ><p style="font-size: 32px">Mobile App Developer</p></a
+          >
+          <p style="font-size: 20px">Durasi 5 bulan</p>
+        </div>
+        <div class="blog-content">
+          <h1>
+            <p>
+              Zǎoshang hǎo zhōngguó xiànzài wǒ yǒu BING CHILLING 🥶🍦 wǒ hěn
+              xǐhuān BING CHILLING 🥶🍦 dànshì sùdù yǔ jīqíng 9 bǐ BING CHILLING
+              🥶🍦 sùdù yǔ jīqíng sùdù yǔ jīqíng 9 wǒ zuì xǐhuān suǒyǐ…xiànzài
+              shì yīnyuè shíjiān zhǔnbèi 1 2 3 liǎng gè lǐbài yǐhòu sùdù yǔ
+              jīqíng 9 ×3 bùyào wàngjì bùyào cu òguò jìdé qù diànyǐngyuàn kàn
+              sùdù yǔ jīqíng 9 yīn wéi fēicháng hǎo diànyǐng dòngzuò fēicháng
+              hǎo chàbùduō yīyàng BING CHILLING 🥶🍦zàijiàn 🥶🍦
+            </p>
+          </h1>
+        </div>
+        <div class="logo">
+          <i class="fa-brands fa-google-play fa-lg"></i>
+          <i class="fa-brands fa-android fa-lg"></i>
+          <i class="fa-brands fa-java fa-lg"></i>
+        </div>
+        <div class="btn-group">
+          <button class="btn-edit">Edit Post</button>
+          <button class="btn-post">Delete Post</button>
+        </div>
+      </div>
+
+      <div class="blog-list-item">
+        <div class="blog-image">
+          <img src="image/EtdRGSQVcAA4xXE.jpg" alt="" />
+        </div>
+        <div class="title-content">
+          <a href="blog-content.html"
+            ><p style="font-size: 32px">Website Developer</p></a
+          >
+          <p style="font-size: 22px">Durasi 3 hari</p>
+        </div>
+        <div class="blog-content">
+          <h1>
+            <p>
+              动态网自由门 天安門 天安门 法輪功 李洪志 Free Tibet 六四天安門事件
+              The Tiananmen Square protests of 1989 天安門大屠殺 The Tiananmen
+              Square Massacre 反右派鬥爭 The Anti-Rightist Struggle 大躍進政策
+              The Great Leap Forward 文化大革命 The Great Proletarian Cultural
+              Revolution 人權 Human Rights 民運 Democratization 自由 Freedom
+              獨立 Independence 多黨制 Multi-party system 台灣 臺灣 Taiwan
+              Formosa 中華民國 Republic of China 西藏 土伯特 唐古特 Tibet
+            </p>
+          </h1>
+        </div>
+        <div class="logo">
+          <i class="fa-brands fa-google-play fa-lg"></i>
+          <i class="fa-brands fa-android fa-lg"></i>
+          <i class="fa-brands fa-java fa-lg"></i>
+        </div>
+        <div class="btn-group">
+          <button class="btn-edit">Edit Post</button>
+          <button class="btn-post">Delete Post</button>
+        </div>
+      </div>
+
+      <div class="blog-list-item">
+        <div class="blog-image">
+          <img src="image/Screenshot (33).png" alt="" />
+        </div>
+        <div class="title-content">
+          <a href="blog-content.html"
+            ><p style="font-size: 32px">Twitch Streamer</p></a
+          >
+          <p style="font-size: 22px">Durasi 1 Tahun</p>
+        </div>
+        <div class="blog-content">
+          <h1>
+            <p>
+              Super Idol的笑容都没你的甜八月正午的阳光都 没你耀眼热爱 105
+              °C的你滴滴清纯的蒸馏水你不
+              知你有多可爱跌倒后会傻笑着再站起你从来都不
+              轻言失败对梦想的执着一直不曾改很安心 当你对
+              我说不怕有我在放着让我来勇敢追自己的梦想那 坚定的模样
+            </p>
+          </h1>
+        </div>
+        <div class="logo">
+          <i class="fa-brands fa-google-play fa-lg"></i>
+          <i class="fa-brands fa-android fa-lg"></i>
+          <i class="fa-brands fa-java fa-lg"></i>
+        </div>
+        <div class="btn-group">
+          <button class="btn-edit">Edit Post</button>
+          <button class="btn-post">Delete Post</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

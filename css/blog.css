@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.blog-form {
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-form .form-container {
+  text-align: left;
+  width: 600px;
+}
+
+.blog-form .form-container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.blog-form form label {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.blog-form form input,
+textarea {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #f4f3f3;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  resize: none;
+}
+
+.startend {
+  display: flex;
+  width: 100%;
+}
+
+.start {
+  flex: 50%;
+}
+.end {
+  flex: 50%;
+  margin-left: 50px;
+}
+
+.blog-form form .input-image {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  background: #f4f3f3;
+  border: 1px solid #c4c4c4;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.blog-form form .input-image label p {
+  font-size: 15px;
+}
+
+.blog-form form .input-image label {
+  width: 95%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-form form .button-group {
+  text-align: right;
+}
+
+.blog-form form button {
+  margin-top: 50px;
+  padding: 8px 20px;
+  font-size: 17px;
+  background: #ec4d37;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.blog-form form button:hover {
+  background-color: rgb(255, 37, 37);
+  color: rgb(255, 255, 255);
+}
+
+.blog-list {
+  padding: 50px 200px;
+  margin-top: 0px;
+  background-color: rgb(206, 206, 206);
+  display: flex;
+  justify-content: center;
+}
+
+.blog-list .blog-list-item {
+  flex: 20%;
+  margin: 50px 40px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgb(126, 126, 126);
+  padding: 30px;
+}
+
+.blog-list .blog-list-item img {
+  width: 100%;
+}
+
+.blog-list .blog-list-item p {
+  font-size: 24px;
+}
+
+.logo i {
+  margin-bottom: 45px;
+  margin-top: 45px;
+  margin-right: 30px;
+  color: rgb(0, 0, 0);
+}
+
+.blog-list .blog-list-item .btn-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.blog-list .blog-list-item .btn-group button {
+  margin-top: 20px;
+  padding: 5px 30px;
+  border-radius: 10px;
+  background: black;
+  color: white;
+  width: 100%;
+}
+
+/* blog detail */
+.detailcontainer {
+  padding: 100px;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+}
+
+.info-kiri {
+  flex: 50%;
+}
+.info-kanan {
+  flex: 50%;
+  margin-left: 50px;
+}
