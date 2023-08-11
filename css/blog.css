@@ -174,19 +174,31 @@ textarea {
 
 /* blog detail */
 .detailcontainer {
+  margin-top: -70px;
   padding: 100px;
   width: 100%;
+  background-color: #fff;
 }
 
 .info {
+  width: 90%;
   display: flex;
-  width: 100%;
 }
 
 .info-kiri {
-  flex: 50%;
+  flex: 40%;
 }
+
+.info-kiri img {
+  width: 100%;
+}
+
 .info-kanan {
   flex: 50%;
-  margin-left: 50px;
+  margin-left: 120px;
+  text-align: justify;
+}
+
+.info-kanan table{
+  width: 70%;
 }
