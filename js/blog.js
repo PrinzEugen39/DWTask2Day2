@@ -32,7 +32,8 @@ const addBlog = (event) => {
   }
 
   let waktu = end.getTime() - start.getTime();
-  let hari = waktu / (1000 * 60 * 60 * 24);
+  console.log(waktu);
+  let hari = waktu / (1000 * 3600 * 24);
   let minggu = Math.floor(hari / 7);
   let bulan = Math.floor(minggu / 4);
   let tahun = Math.floor(bulan / 12);
@@ -40,13 +41,13 @@ const addBlog = (event) => {
 
   if (hari > 0) {
     durasi = hari + " Hari";
-  }
+  } 
   if (minggu > 0) {
     durasi = minggu + " Minggu";
-  }
-  if (tahun > 0) {
+  } 
+  if (bulan > 0) {
     durasi = bulan + " Bulan";
-  }
+  } 
   if (tahun > 0) {
     durasi = tahun + " Tahun";
   }
@@ -59,17 +60,18 @@ const addBlog = (event) => {
     description,
     image,
   };
-  
+
   dataBlog.push(blog);
   console.log(dataBlog);
   renderBlog();
 };
 
 const renderBlog = () => {
-    document.getElementById("contents").innerHTML = ""
-    for (let i = 0; i < dataBlog.length; i++) {
-      document.getElementById("contents").innerHTML +=
-     `<div class="blog-list-item">
+  document.getElementById("contents").innerHTML = "";
+  for (let i = 0; i < dataBlog.length; i++) {
+    document.getElementById(
+      "contents"
+    ).innerHTML += `<div class="blog-list-item">
      <div class="blog-image">
        <img src="${dataBlog[i].image}" alt="" />
      </div>
@@ -93,9 +95,46 @@ const renderBlog = () => {
        <button class="btn-edit">Edit Post</button>
        <button class="btn-post">Delete Post</button>
      </div>
-   </div>`
-    }
+   </div>`;
   }
+};
+
+// function getFullTime(time) {
+  // New date, mendapatkan terkait tanffal dan waktu kapan dan fungsinya dijalankan
+  // let time = new Date();
+  // console.log(time);
+
+//   let monthName = [
+//     "Januari",
+//     "Februari",
+//     "Maret",
+//     "April ",
+//     "May",
+//     "Juni",
+//     "Juli",
+//     "August",
+//     "September",
+//     "Oktober",
+//     "November",
+//     "Desember",
+//   ];
+
+//   let date = time.getDate();
+//   let monthIndex = time.getMonth();
+//   let year = time.getFullYear();
+
+//   let hours = time.getHours();
+//   let minutes = time.getMinutes();
+//   if (hours <= 9 ) {
+//     hours = "0" + hours;
+//   } else if (minutes <= 9 ) {
+//     minutes = "0" + minutes;
+//   }
+
+// return `${date} ${monthName[monthIndex]} ${year} ${hours}:${minutes}`;
+
+// }
+// getFullTime();
 
 // // Array
 
