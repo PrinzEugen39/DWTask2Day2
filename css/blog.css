@@ -3,6 +3,9 @@
 * {
   font-family: "Poppins", sans-serif;
 }
+body {
+  overflow-x: hidden;
+}
 
 .blog-form {
   padding: 50px 0;
@@ -171,34 +174,40 @@ textarea {
   padding: 3px;
 }
 
+.blog-list .blog-list-item .btn-group button:hover {
+  background-color: orangered;
+}
 
 /* blog detail */
 .detailcontainer {
   margin-top: -70px;
   padding: 100px;
-  width: 100%;
-  background-color: #fff;
 }
 
 .info {
-  width: 90%;
+  width: 100%;
   display: flex;
 }
 
 .info-kiri {
-  flex: 40%;
+  flex: 60%;
 }
 
 .info-kiri img {
-  width: 100%;
+  width: 900px;
+  height: 550px;
 }
 
 .info-kanan {
-  flex: 50%;
-  margin-left: 120px;
-  text-align: justify;
+  flex: 40%;
+  text-align: start;
+  margin-left: -600px;
 }
 
 .info-kanan table{
   width: 70%;
+}
+
+.info-kanan h2 {
+  font-size: 40px;
 }
