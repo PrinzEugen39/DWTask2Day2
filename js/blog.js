@@ -1,4 +1,5 @@
 let dataBlog = [];
+let hasData = false;
 
 const addBlog = (event) => {
   event.preventDefault();
@@ -41,32 +42,49 @@ const addBlog = (event) => {
 
   if (hari > 0) {
     durasi = hari + " Hari";
-  } 
+  }
   if (minggu > 0) {
     durasi = minggu + " Minggu";
-  } 
+  }
   if (bulan > 0) {
     durasi = bulan + " Bulan";
-  } 
+  }
   if (tahun > 0) {
     durasi = tahun + " Tahun";
   }
 
+  const NodeJsIcon = '<i class="fa-brands fa-node fa-2x"></i>';
+  const ReactJsicon = '<i class="fa-brands fa-react fa-2x"></i>';
+  const JSIcon = '<i class="fa-brands fa-square-js fa-2x"></i>';
+  const htmlicon = '<i class="fa-brands fa-html5 fa-2x"></i>';
+
+  let nodeJs = document.getElementById("cek1").checked ? NodeJsIcon : "";
+  let reactJs = document.getElementById("cek2").checked ? ReactJsicon : "";
+  let JS = document.getElementById("cek3").checked ? JSIcon : "";
+  let htmll = document.getElementById("cek4").checked ? htmlicon : "";
   image = URL.createObjectURL(image[0]);
 
   let blog = {
     project,
     durasi,
     description,
+    postAt: new Date(),
     image,
+    nodeJs,
+    reactJs,
+    JS,
+    htmll,
   };
 
   dataBlog.push(blog);
-  console.log(dataBlog);
+  hasData = true;
   renderBlog();
 };
 
 const renderBlog = () => {
+  if (!hasData) {
+    return;
+  }
   document.getElementById("contents").innerHTML = "";
   for (let i = 0; i < dataBlog.length; i++) {
     document.getElementById(
@@ -76,7 +94,9 @@ const renderBlog = () => {
        <img src="${dataBlog[i].image}" alt="" />
      </div>
      <div class="title-content">
-       <a href="blog-content.html"><p style="font-size: 32px;">${dataBlog[i].project}</p></a>
+       <a href="blog-content.html"><p style="font-size: 32px;">${
+         dataBlog[i].project
+       }</p></a>
        <p style="font-size: 20px;">Durasi: ${dataBlog[i].durasi}</p>
      </div>
      <div class="blog-content">
@@ -87,10 +107,12 @@ const renderBlog = () => {
        </h1>
      </div>
      <div class="logo">
-       <i class="fa-brands fa-google-play fa-lg"></i>
-       <i class="fa-brands fa-android fa-lg"></i>
-       <i class="fa-brands fa-java fa-lg"></i>
+       ${dataBlog[i].nodeJs}
+       ${dataBlog[i].reactJs}
+       ${dataBlog[i].JS}
+       ${dataBlog[i].htmll}
      </div>
+     <p>diposting sejak : ${getDistance(dataBlog[i].postAt)}</p>
      <div class="btn-group">
        <button class="btn-edit">Edit Post</button>
        <button class="btn-post">Delete Post</button>
@@ -99,10 +121,50 @@ const renderBlog = () => {
   }
 };
 
+function getDistance(time) {
+  let timeNow = new Date();
+  let timePost = time;
+
+  let distance = timeNow - timePost;
+
+  let milisecond = 1000;
+  let secondInHours = 3600;
+  let hoursInDays = 24;
+
+  let distanceDay = Math.floor(
+    distance / (milisecond * secondInHours * hoursInDays)
+  );
+  let distanceHours = Math.floor(distance / (milisecond * 60 * 60));
+  let distanceMinutes = Math.floor(distance / (milisecond * 60));
+  let distanceSecond = Math.floor(distance / milisecond);
+
+  if (distanceSecond <= 60) {
+    return `${distanceSecond} seconds ago`;
+  } else if (distanceSecond > 60) {
+    return `${distanceMinutes} minutes ` + `${distanceSecond} seconds ago`;
+  } else if (distanceMinutes > 60) {
+    return (
+      `${distanceHours} hours ` +
+      `${distanceMinutes} minutes ` +
+      `${distanceSecond} seconds ago`
+    );
+  } else if (distanceHours > 24) {
+    return (
+      `${distanceDay} days ` +
+      `${distanceHours} hours ` +
+      `${distanceMinutes} minutes ` +
+      `${distanceSecond} seconds ago`
+    );
+  }
+}
+
+setInterval(function () {
+  renderBlog();
+}, 1000);
 // function getFullTime(time) {
-  // New date, mendapatkan terkait tanffal dan waktu kapan dan fungsinya dijalankan
-  // let time = new Date();
-  // console.log(time);
+// New date, mendapatkan terkait tanffal dan waktu kapan dan fungsinya dijalankan
+// let time = new Date();
+// console.log(time);
 
 //   let monthName = [
 //     "Januari",
