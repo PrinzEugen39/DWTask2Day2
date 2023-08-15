@@ -18,20 +18,30 @@
     <!-- NAV -->
     <nav>
       <div class="nav-left">
-        <ul>
-          <li>
-            <a href="index.html" class="logo"
-              ><img src="image/logo.png" width="100%" alt=""
-            /></a>
-          </li>
-          <li><a href="index.html" class="Home">HOME</a></li>
-          <li><a href="blog.html" class="MyProject">MY PROJECT</a></li>
-        </ul>
+          <ul>
+              <li><a href="index.html"><img src="image/logo.png" width="100%" alt="" /></a></li>
+              <li><a href="" class="Home item-collapse">HOME</a></li>
+              <li><a href="blog.html" class="MyProject item-collapse">MY PROJECT</a></li>
+          </ul>
       </div>
-      <div class="nav-right">
-        <a href="contact.html">Contact Me</a>
+      <div class="nav-right item-collapse">
+          <a href="contact.html">Contact Me</a>
       </div>
-    </nav>
+  
+      <div class="nav-right" id="barsmenu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger();"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+  </nav>
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="index.html" class="hamburger-active">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
     <!-- ProjectDetail -->
     <section class="detailcontainer">
@@ -79,6 +89,6 @@
         劉曉波动态网自由门
       </p>
     </section>
-    
+    <script src="js/navbar.js"></script>
   </body>
 </html>

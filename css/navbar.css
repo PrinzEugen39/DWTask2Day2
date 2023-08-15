@@ -64,3 +64,46 @@ nav ul li .MyProject {
     background-color: red;
     color: rgb(255, 255, 255);
 }
+#barsmenu {
+    display: none;
+  }
+  .hamburger a {
+    color: #000;
+  }
+  
+  .hamburger-nav-container {
+    font-size: 23px;
+    list-style-type: none;
+    display: none;
+  }
+  
+  .hamburger-nav-container a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #9a9a9a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+  
+  .hamburger-nav-container .hamburger-active {
+    text-decoration: none;
+    color: #fff;
+    background-color: orangered;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #fff;
+  }
+
+@media only screen and (max-width: 890px) {
+    #barsmenu {
+        display: block;
+    }
+    .item-collapse {
+        display: none;
+    }
+}

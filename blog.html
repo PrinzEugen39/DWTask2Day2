@@ -19,20 +19,30 @@
     <!-- NAV -->
     <nav>
       <div class="nav-left">
-        <ul>
-          <li>
-            <a href="index.html" class="logo"
-              ><img src="image/logo.png" width="100%" alt=""
-            /></a>
-          </li>
-          <li><a href="index.html" class="Home">HOME</a></li>
-          <li><a href="blog.html" class="MyProject">MY PROJECT</a></li>
-        </ul>
+          <ul>
+              <li><a href="index.html"><img src="image/logo.png" width="100%" alt="" /></a></li>
+              <li><a href="" class="Home item-collapse">HOME</a></li>
+              <li><a href="blog.html" class="MyProject item-collapse">MY PROJECT</a></li>
+          </ul>
       </div>
-      <div class="nav-right">
-        <a href="contact.html">Contact Me</a>
+      <div class="nav-right item-collapse">
+          <a href="contact.html">Contact Me</a>
       </div>
-    </nav>
+  
+      <div class="nav-right" id="barsmenu">
+          <button
+            style="background-color: transparent; border: none; cursor: pointer"
+            onclick="openHamburger();"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+  </nav>
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="hamburger-active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
     <!-- Blog -->
     <div class="blog">
@@ -139,13 +149,13 @@
     <div id="contents" class="blog-list">
       <div class="blog-list-item">
         <div class="blog-image">
-          <img src="image/EVfBp4yU8AEVisy.jpg" alt="" style="object-fit: cover;"/>
+          <img src="image/EVfBp4yU8AEVisy.jpg" alt=""/>
         </div>
         <div class="title-content">
-          <a href="blog-content.html"
-            ><p style="font-size: 34px">Mobile App Developer</p></a
-          >
-          <p style="font-size: 20px">Durasi 5 bulan</p>
+          <a href="blog-content.html">
+            <p id="blog-content-title">Mobile App Developer</p>
+          </a>
+          <p id="blog-content-duration">Durasi 5 bulan</p>
         </div>
         <div class="blog-content">
           <h1>
@@ -173,9 +183,9 @@
         </div>
         <div class="title-content">
           <a href="blog-content.html"
-            ><p style="font-size: 34px">Website Developer</p></a
+            ><p id="blog-content-title">Website Developer</p></a
           >
-          <p style="font-size: 22px">Durasi 3 hari</p>
+          <p id="blog-content-duration">Durasi 3 hari</p>
         </div>
         <div class="blog-content">
           <h1>
@@ -203,9 +213,9 @@
         </div>
         <div class="title-content">
           <a href="blog-content.html"
-            ><p style="font-size: 34px">Twitch Streamer</p></a
+            ><p id="blog-content-title">Twitch Streamer</p></a
           >
-          <p style="font-size: 22px">Durasi 1 Tahun</p>
+          <p id="blog-content-duration">Durasi 1 Tahun</p>
         </div>
         <div class="blog-content">
           <h1>
@@ -230,6 +240,7 @@
       </div>
     </div>
     <script src="js/blog.js"></script>
+    <script src="js/navbar.js"></script>
   </body>
 
 </html>

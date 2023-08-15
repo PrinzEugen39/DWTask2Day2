@@ -1,43 +1,151 @@
 body {
-    background-image: url('https://pbs.twimg.com/media/F1SeoEVakAEUt9k?format=jpg&name=4096x4096');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  }
+  background-image: url("https://pbs.twimg.com/media/F1SeoEVakAEUt9k?format=jpg&name=4096x4096");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 .container {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
 }
-  
-section{
-    display: flex;
-    width: 80%;
-    background-color: white; 
-    margin: 90px auto; 
-    width: 1300px; 
-    padding: 90px; 
-    border: 1px solid black; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px #666666;
-    font-family: Segoe UI;
-    
+
+section {
+  display: flex;
+  background-color: white;
+  margin: 40px;
+  width: 70%;
+  padding: 90px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #666666;
+  font-family: Segoe UI;
 }
 .left {
-    flex: 70%;
-    margin-right: 80px;
-    margin-top: 40px;
+  flex: 70%;
+  margin-right: 80px;
+  margin-top: 40px;
+}
+.left #hi {
+  font-size: 36px;
+}
+.left p {
+  font-size: 26px;
+  text-align: justify;
+}
+.left button {
+  width: 30%;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  margin-right: 40px;
+  font-size: 26px;
+}
+.left a {
+  text-decoration: none;
+  color: black;
+}
+.logo {
+  margin-top: 120px;
 }
 
 .right {
-    flex: 30%;
-    background-color: white; 
-    border: 2px solid black; 
-    margin: auto; 
-    border-radius: 15px; 
-    justify-content: center; 
-    box-shadow: 0 0 10px black;
-    padding: 20px;
+  flex: 30%;
+  background-color: white;
+  border: 2px solid black;
+  margin: auto;
+  border-radius: 15px;
+  justify-content: center;
+  box-shadow: 0 0 10px black;
+  padding: 20px;
+}
+.right img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.right #habib {
+  font-size: 38px;
+  text-align: center;
+}
+.right #ket {
+  text-align: center;
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 850px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  .logo {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  section {
+    flex-direction: column;
+    align-items: center;
+    width: 69%;
+    padding: 40px;
+  }
+  .left {
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+
+  .left #hi {
+    font-size: 20px;
+  }
+  .left p {
+    font-size: 14px;
+    text-align: justify;
+  }
+  .left button {
+    width: 30%;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    font-size: 14px;
+  }
+  .left #donlodcv {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+  }
+  .left .logo {
+    margin: 30px 30px;
+  }
+  .left .logo a {
+    font-size: 14px;
+  }
+
+  .right {
+    width: 90%;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px;
+    justify-content: center;
+    box-shadow: 0 0 8px black;
+    padding: 10px;
+  }
+  .right img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .right p {
+    font-size: 18px;
+  }
+  .right #habib {
+    font-size: 28px;
+    text-align: center;
+  }
 }
