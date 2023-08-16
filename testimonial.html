@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial</title>
+  <link rel="icon" type="image" href="image/logo.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/testi.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-left">
+      <ul>
+        <li><a href="index.html"><img src="image/logo.png" width="100%" alt="" /></a></li>
+        <li><a href="index.html" class="Home item-collapse">HOME</a></li>
+        <li><a href="blog.html" class="MyProject item-collapse">MY PROJECT</a></li>
+        <li><a href="testimonial.html" class="MyProject item-collapse">TESTIMONIALS</a></li>
+      </ul>
+    </div>
+    <div class="nav-right item-collapse">
+      <a href="contact.html">Contact Me</a>
+    </div>
+
+    <div class="nav-right" id="barsmenu">
+      <button style="background-color: transparent; border: none; cursor: pointer" onclick="openHamburger();">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="hamburger-nav-container" id="hamburger-nav-container">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Projects</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonial.html" class="hamburger-active">Testimonials</a>
+  </div>
+
+
+  <!-- UTAMA -->
+  <div class="container">
+    <h1>My Testimonial</h1>
+    <section class="testimonials" id="testimonials">
+      <div class="testimoni">
+        <img src="image/blog-img.png" alt="">
+        <p class="quote">Onegai! Kon kon O Inari-sama</p>
+        <p class="author">- Nanahira</p>
+      </div>
+      <div class="testimoni">
+        <img src="image/Screenshot (33).png" alt="">
+        <p class="quote">Ruma</p>
+        <p class="author">- Kairiki Bear</p>
+      </div>
+      <div class="testimoni">
+        <img src="image/EtdRGSQVcAA4xXE.jpg" alt="">
+        <p class="quote">Tensei Ringo</p>
+        <p class="author">- PinocchioP</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/class.js"></script>
+</body>
+
+</html>

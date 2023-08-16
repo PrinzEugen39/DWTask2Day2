@@ -30,7 +30,7 @@ input, select, textarea {
     width: 105%;
 }
 
-button {
+form button {
     background-color: rgb(0, 0, 0);
     color: white;
     padding: 10px 40px;
@@ -41,7 +41,7 @@ button {
     margin-top: 20px;
 }
 
-button:hover {
+form button:hover {
     background-color: rgb(255, 72, 0);
     color: rgb(255, 255, 255);
 }

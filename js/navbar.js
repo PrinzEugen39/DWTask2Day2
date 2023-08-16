@@ -1,3 +1,4 @@
+
 let hamburgerIsOpen = false;
 const openHamburger = () => {
   let hamburgerNavContainer = document.getElementById(
