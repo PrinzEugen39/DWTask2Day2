@@ -41,31 +41,53 @@
     <a href="testimonial.html" class="hamburger-active">Testimonials</a>
   </div>
 
-
-  <!-- UTAMA -->
-  <div class="container">
-    <h1>My Testimonial</h1>
-    <section class="testimonials" id="testimonials">
-      <div class="testimoni">
-        <img src="image/blog-img.png" alt="">
-        <p class="quote">Onegai! Kon kon O Inari-sama</p>
-        <p class="author">- Nanahira</p>
-      </div>
-      <div class="testimoni">
-        <img src="image/Screenshot (33).png" alt="">
-        <p class="quote">Ruma</p>
-        <p class="author">- Kairiki Bear</p>
-      </div>
-      <div class="testimoni">
-        <img src="image/EtdRGSQVcAA4xXE.jpg" alt="">
-        <p class="quote">Tensei Ringo</p>
-        <p class="author">- PinocchioP</p>
-      </div>
-    </section>
+  <div class="container-testi">
+    <div class="container">
+      <h1>What do people say about me</h1>
+      <div class="container-rating">
+        <h3>Filter rating :</h3>
+        <div class="rating">
+            <button class="rating-btn" onclick="allTestimonials()">All</button>
+            <button class="rating-btn" onclick="filterTestimonials(1)">
+                1 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn" onclick="filterTestimonials(2)">
+                2 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn" onclick="filterTestimonials(3)">
+                3 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn" onclick="filterTestimonials(4)">
+                4 <i class="fa-solid fa-star"></i>
+            </button>
+            <button class="rating-btn" onclick="filterTestimonials(5)">
+                5 <i class="fa-solid fa-star"></i>
+            </button>
+        </div>
+    </div>
+      <section class="testimonials" id="testimonials">
+        <div class="testimoni">
+          <!-- <img src="image/blog-img.png" alt="">
+          <p class="quote">Onegai! Kon kon O Inari-sama</p>
+          <p class="author">- Nanahira</p>
+        </div>
+        <div class="testimoni">
+          <img src="image/Screenshot (33).png" alt="">
+          <p class="quote">Ruma</p>
+          <p class="author">- Kairiki Bear</p>
+        </div>
+        <div class="testimoni">
+          <img src="image/EtdRGSQVcAA4xXE.jpg" alt="">
+          <p class="quote">Tensei Ringo</p>
+          <p class="author">- PinocchioP</p> -->
+        </div>
+      </section>
+    </div>
   </div>
-
+  <!-- UTAMA -->
   <script src="js/navbar.js"></script>
-  <script src="js/class.js"></script>
+  <script src="js/testimonial.js"></script>
+  <!-- <script src="js/class.js"></script> -->
 </body>
 
 </html>
