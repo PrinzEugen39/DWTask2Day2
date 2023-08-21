@@ -277,35 +277,132 @@ textarea {
 }
 
 /* blog detail */
+.abc {
+  padding: 30px;
+  background-color: #fff;
+  margin: 80px;
+  width: 90%;
+  border: 0px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #666666;
+  align-items: center;
+}
+.abc .title {
+  text-align: center; font-size: 42px;
+}
 .detailcontainer {
-  margin-top: -70px;
-  padding: 100px;
+  display: flex;
+  margin-bottom: 100px;
 }
 
 .info {
-  width: 100%;
-  display: flex;
+  margin-top: 20px;
+  margin-left: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #666666;
 }
 
-.info-kiri {
-  flex: 60%;
+.info .info-kiri img {
+  width: 500px;
+  height: 300px;
 }
 
-.info-kiri img {
-  width: 900px;
-  height: 550px;
+.detailcontainer .content-details{
+  margin-left: 50px;
+  margin-right: 50px;
+  align-self: flex-start;
+  text-align: justify;
 }
 
-.info-kanan {
-  flex: 40%;
-  text-align: start;
-  margin-left: -600px;
+@media only screen and (max-width: 900px) {
+  .abc {
+    padding: 10px;
+    background-color: #fff;
+    margin: 40px;
+    width: 88%;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #666666;
+    align-items: center;
+  }
+  
+  .abc .title {
+    text-align: center; font-size: 32px;
+  }
+
+  .detailcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  
+  .info {
+    align-self: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px #666666;
+  }
+  
+  .info .info-kiri img {
+    width: 500px;
+    height: 300px;
+  }
+  
+  .detailcontainer .content-details{
+    margin-left: 50px;
+    margin-right: 50px;
+    align-self: flex-start;
+    text-align: justify;
+    font-size: 16px;
+  }
+  
 }
 
-.info-kanan table {
-  width: 70%;
-}
+@media only screen and (max-width: 500px) {
+  .abc {
+    padding: 10px;
+    background-color: #fff;
+    margin: 40px;
+    width: 77%;
+    border: 0px solid black;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #666666;
+    align-items: center;
+  }
+  
+  .abc .title {
+    text-align: center; font-size: 32px;
+  }
 
-.info-kanan h2 {
-  font-size: 40px;
+  .detailcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  
+  .info {
+    align-self: center;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 0px #666666;
+  }
+  
+  .info .info-kiri img {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .detailcontainer .content-details{
+    margin-left: 20px;
+    margin-right: 20px;
+    align-self: flex-start;
+    text-align: justify;
+    font-size: 14px;
+  }
+  
 }
